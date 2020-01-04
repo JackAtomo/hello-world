@@ -1,0 +1,142 @@
+.note {
+  overflow: auto;
+  padding: 0 10%;
+}
+
+.note .title {
+  background: transparent;
+  border: none;
+  color: var(--primary);
+  font-family: var(--font-secondary);
+  font-size: 2.5rem;
+  height: 70px;
+  font-weight: bold;
+  outline: none;
+  width: 100%;
+  resize: none;
+}
+
+.note .title::placeholder {
+  font-family: var(--font-primary);
+  opacity: 0.5;
+  color: var(--medium);
+}
+
+.note .content {
+  font-family: var(--font-primary);
+  border: none;
+  flex: 1;
+  font-size: 1rem;
+  background: transparent;
+  outline: none;
+  display: block;
+  margin: 2rem 0;
+  width: 100%;
+  color: var(--medium);
+  resize: none;
+  overflow: hidden;
+  min-height: 100%;
+  max-height: 100%;
+}
+
+.note .content::placeholder {
+  color: var(--medium);
+  opacity: 0.5;
+}
+
+.note .empty {
+  color: var(--medium);
+  font-family: var(--font-primary);
+  margin: 2rem 0;
+  opacity: 0.5;
+  font-weight: bold;
+  font-size: var(--font-size-lg);
+}
+
+.note .markdown {
+  color: var(--medium);
+  margin: 1rem 0;
+  overflow: hidden;
+}
+
+.note .markdown h1,
+.note .markdown h2,
+.note .markdown h3,
+.note .markdown h4,
+.note .markdown h5,
+.note .markdown h6 {
+  color: var(--primary);
+  font-family: var(--font-secondary);
+  text-transform: uppercase;
+  margin: 30px 0;
+}
+
+.note .markdown h1 {
+  font-size: 2rem;
+}
+
+.note .markdown h2 {
+  font-size: 1.5rem;
+}
+
+.note .markdown h3 {
+  font-size: 1.3rem;
+}
+
+.note .markdown h4 {
+  font-size: 1.1rem;
+}
+
+.note .markdown h5 {
+  font-size: 1rem;
+}
+
+.note .markdown h6 {
+  font-size: 0.8rem;
+}
+
+.note .markdown p {
+  font-size: 1rem;
+  margin: 20px 0;
+  color: var(--medium);
+  font-family: var(--font-primary);
+}
+
+.note .markdown blockquote {
+  margin: 10px 0;
+  padding-left: 1rem;
+}
+
+.note .markdown pre {
+  padding: 10px;
+  background-color: var(--medium);
+  color: var(--dark);
+  overflow: auto;
+}
+
+.note .markdown pre::-webkit-scrollbar-thumb {
+  background: none;
+}
+
+.no-note-selected {
+  font-family: var(--font-primary);
+  opacity: 0.5;
+  text-transform: none;
+  text-align: center;
+  line-height: 25px;
+  margin: 30% 1rem 1rem 3rem;
+  color: var(--medium);
+}
+
+.note textarea {
+  flex: 1;
+  font-size: 1rem;
+  background: transparent;
+  outline: none;
+  overflow: hidden;
+}
+
+.note textarea::placeholder {
+  color: var(--primary);
+  opacity: 0.5;
+}

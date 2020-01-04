@@ -1,0 +1,48 @@
+.note-list {
+  flex-direction: column;
+  padding: var(--space-md);
+  overflow: auto;
+}
+
+.note-item {
+  padding: 15px 0;
+  cursor: pointer;
+  height: 100px;
+  padding: var(--space-md);
+  border-bottom: 1px solid var(--bright);
+}
+
+.note-item.selected {
+  border-bottom: 0.5rem solid var(--secondary);
+  background: var(--primary);
+  color: var(--dark);
+}
+
+.note-item .container {
+  display: flex;
+}
+
+.note-item .date {
+  font-family: var(--font-secondary);
+  position: relative;
+  top: 5px;
+  color: var(--medium);
+}
+
+.note-item.selected .date {
+  color: var(--dark);
+}
+
+.note-item.selected .title {
+  color: var(--dark);
+}
+
+.note-item .description {
+  margin: 10px 0;
+  color: var(--medium);
+  font-size: var(--font-xs);
+}
+
+.note-item.selected .description {
+  color: var(--dark);
+}
