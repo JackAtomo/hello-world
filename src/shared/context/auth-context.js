@@ -14,7 +14,7 @@ const currentUser = JSON.parse(localStorage.getItem('currentUser'));
 export function AuthProvider({ children }) {
   // 2.1) Creamos Estados
   // En caso de que trabaje con roles deberia decodificar el token para obtener el role inicial
-  const [role, setRole] = useState(decodeTokenAndGetRole(currentUser.token));
+  // const [role, setRole] = useState(decodeTokenAndGetRole(currentUser.token));
   const [isAuthenticated, setIsAuthenticated] = useState(currentUser !== null);
   const [user, setUser] = useState(currentUser && currentUser.user);
 
@@ -31,7 +31,7 @@ export function AuthProvider({ children }) {
       setUser(user);
       setIsAuthenticated(true);
       // Si uso roles => decodificar el token para sacar el role
-      setRole(role);
+      // setRole(role);
       if (token) {
         history.push('/');
       }
@@ -75,8 +75,7 @@ export function AuthProvider({ children }) {
   return (
     <AuthContext.Provider
       value={{
-        role,
-        setRole,
+        isAuthenticated,
         setIsAuthenticated,
         signIn,
         user,

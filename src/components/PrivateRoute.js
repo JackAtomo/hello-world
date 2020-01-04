@@ -6,7 +6,7 @@ import { useAuth } from "../shared/context/auth-context";
 // verificación de permisos de acceso a las rutas
 function PrivateRoute({ children, /* allowedRoles */ ...others }) {
   // Extraigo del contexto (auth-context) si el usuario esta autenticado
-  const { role } = useAuth();
+  const { isAuthenticated } = useAuth();
 
   // Si tuviese roles extraería el role
   // const { role } = useAuth();
@@ -14,18 +14,18 @@ function PrivateRoute({ children, /* allowedRoles */ ...others }) {
 
   // Si tiene permiso para acceder a la ruta devuelvo la ruta
   // En otro caso redirijo
-  /*return (
+  return (
     <Route {...others}>
       {isAuthenticated ? children : <Redirect to="/login" />}
     </Route>
   );
-*/
+
   // Si gestionase roles podria hacerlo asi
-   return (
-     <Route {...others}>
-       {allowedRoles.includes(role) ? children : <Redirect to="/login" />}
-     </Route>
-   );
+  // return (
+  //   <Route {...others}>
+  //     {allowedRoles.includes(role) ? children : <Redirect to="/login" />}
+  //   </Route>
+  // );
 }
 
 export { PrivateRoute };
